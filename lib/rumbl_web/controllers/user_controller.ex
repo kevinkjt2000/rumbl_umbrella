@@ -4,7 +4,7 @@ defmodule RumblWeb.UserController do
   alias Rumbl.Accounts.User
 
   def create(conn, %{"user" => user_params}) do
-    case Accounts.create_user(user_params) do
+    case Accounts.register_user(user_params) do
       {:ok, user} ->
         conn
         |> put_flash(:info, "#{user.name} created!")
