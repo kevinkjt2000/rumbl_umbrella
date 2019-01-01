@@ -33,9 +33,12 @@ defmodule Rumbl.MixProject do
   # Type `mix help deps` for examples and options.
   defp deps do
     [
+      {:bcrypt_elixir, "~> 1.0"},
+      {:comeonin, "~> 4.1"},
       {:ecto_sql, "~> 3.0"},
       {:gettext, "~> 0.11"},
       {:jason, "~> 1.0"},
+      {:pbkdf2_elixir, "~> 0.12"},
       {:phoenix, "~> 1.4.0"},
       {:phoenix_ecto, "~> 4.0"},
       {:phoenix_html, "~> 2.11"},
