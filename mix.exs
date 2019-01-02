@@ -35,6 +35,7 @@ defmodule Rumbl.MixProject do
     [
       {:bcrypt_elixir, "~> 1.0"},
       {:comeonin, "~> 4.1"},
+      {:credo, "~> 1.0.0", only: [:dev, :test], runtime: false},
       {:ecto_sql, "~> 3.0"},
       {:gettext, "~> 0.11"},
       {:jason, "~> 1.0"},
