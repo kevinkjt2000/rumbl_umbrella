@@ -5,8 +5,19 @@ defmodule Rumbl.Multimedia do
 
   import Ecto.Query, warn: false
   alias Rumbl.Accounts
+  alias Rumbl.Multimedia.Category
   alias Rumbl.Multimedia.Video
   alias Rumbl.Repo
+
+  def list_alphabetical_categories do
+    Category
+    |> Category.alphabetical()
+    |> Repo.all()
+  end
+
+  def create_category(name) do
+    Repo.get_by(Category, name: name) || Repo.insert!(%Category{name: name})
+  end
 
   defp preload_user(video_or_videos) do
     Repo.preload(video_or_videos, :user)
