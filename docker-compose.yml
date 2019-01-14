@@ -1,0 +1,12 @@
+version: '3.1'
+
+services:
+  postgres:
+    image: postgres:alpine
+    restart: on-failure
+    environment:
+      POSTGRES_DB: throwaway_dev
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: postgres
+    ports:
+      - 5433:5432
