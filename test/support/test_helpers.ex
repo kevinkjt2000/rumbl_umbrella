@@ -2,7 +2,7 @@ defmodule Rumbl.TestHelpers do
   alias Rumbl.{Accounts, Multimedia}
 
   def user_fixture(attrs \\ %{}) do
-    username = "user#{System.unique_integer([:postive])}"
+    username = "user#{System.unique_integer([:positive])}"
 
     {:ok, user} =
       attrs
