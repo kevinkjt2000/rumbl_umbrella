@@ -33,7 +33,7 @@ defmodule Rumbl.Multimedia do
   def get_user_video!(%Accounts.User{} = user, id) do
     from(v in Video, where: v.id == ^id)
     |> user_videos_query(user)
-    |> Repo.one()
+    |> Repo.one!()
     |> preload_user()
   end
 
