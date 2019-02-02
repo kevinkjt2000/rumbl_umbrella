@@ -18,7 +18,7 @@ defmodule RumblWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
-    resources "/users", UserController, only: [:index, :show, :new, :create]
+    resources "/users", UserController, only: [:index, :new, :show, :create]
     resources "/sessions", SessionController, only: [:new, :create, :delete]
   end
 
