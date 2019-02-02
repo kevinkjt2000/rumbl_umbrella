@@ -33,7 +33,7 @@ defmodule Rumbl.MultimediaTest do
       assert [%Video{id: ^id1}, %Video{id: ^id2}] = Multimedia.list_videos()
     end
 
-    test "get_video/1 returns the video with given id" do
+    test "get_video!/1 returns the video with given id" do
       owner = user_fixture()
       %Video{id: id} = video_fixture(owner)
       assert %Video{id: ^id} = Multimedia.get_video!(id)
@@ -47,7 +47,7 @@ defmodule Rumbl.MultimediaTest do
       assert video.url == "http://local"
     end
 
-    test "create_video/2 with invalid data returns error" do
+    test "create_video/2 with invalid data returns error changeset" do
       owner = user_fixture()
       assert {:error, %Ecto.Changeset{}} = Multimedia.create_video(owner, @invalid_attrs)
     end
@@ -60,7 +60,7 @@ defmodule Rumbl.MultimediaTest do
       assert video.title == "updated title"
     end
 
-    test "update_video/2 with invalid data returns error" do
+    test "update_video/2 with invalid data returns error changeset" do
       owner = user_fixture()
       %Video{id: id} = video = video_fixture(owner)
       assert {:error, %Ecto.Changeset{}} = Multimedia.update_video(video, @invalid_attrs)
