@@ -51,9 +51,6 @@ defmodule RumblWeb.VideoControllerTest do
     non_owner = user_fixture(username: "sneaky")
     conn = assign(conn, :current_user, non_owner)
 
-    IO.inspect(Routes.video_path(conn, :show, video))
-    IO.inspect(get(conn, Routes.video_path(conn, :show, video)))
-
     assert_error_sent :not_found, fn ->
       get(conn, Routes.video_path(conn, :show, video))
     end
