@@ -33,7 +33,6 @@ defmodule Rumbl.MixProject do
   # Type `mix help deps` for examples and options.
   defp deps do
     [
-      {:bcrypt_elixir, "~> 1.0"},
       {:comeonin, "~> 4.1"},
       {:credo, "~> 1.0.0", only: [:dev, :test], runtime: false},
       {:ecto_sql, "~> 3.0"},
