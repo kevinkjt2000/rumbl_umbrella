@@ -1,7 +1,7 @@
 defmodule RumblWeb.VideoChannel do
   use RumblWeb, :channel
 
-  def join("videos:" <> video_id, _params, socket) do
+  def join("videos:" <> _video_id, _params, socket) do
     {:ok, socket}
   end
 
