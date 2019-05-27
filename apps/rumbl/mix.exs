@@ -41,8 +41,7 @@ defmodule Rumbl.MixProject do
       {:jason, "~> 1.0"},
       {:comeonin, "~> 4.1"},
       {:bcrypt_elixir, "~> 1.0"},
-      {:pbkdf2_elixir, "~> 0.12"},
-      {:sweet_xml, "~> 0.6.5"}
+      {:pbkdf2_elixir, "~> 0.12"}
     ]
   end
 
